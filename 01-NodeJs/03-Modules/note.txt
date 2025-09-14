@@ -1,0 +1,30 @@
+📦 Types of Modules in Node.js
+------------------------------------
+1.Built-In Modules
+
+->Already included in Node.js (no installation needed).
+->Examples: fs, path, http, os, events.
+
+2.3rd Party (External) Modules
+
+->Installed using npm (Node Package Manager).
+->Example:
+
+npm install chalk
+Then use:
+const chalk = require('chalk');
+console.log(chalk.green("Hello World"));
+
+
+3.Custom (User-Defined) Modules
+
+->Your own modules (split code into separate files).
+// math.js
+function add(a, b) {
+  return a + b;
+}
+module.exports = add;
+
+// index.js
+const add = require('./math');
+console.log(add(5, 10)); // 15
